@@ -76,7 +76,7 @@ class Headercontroller extends Controller
                 File::delete(public_path().'/admin/images/'.$update_header->image);
             }
             $filename = Str::random(10).'.'.$request->file('image')->getClientOriginalExtension();
-            $request->file('image')->move(public_path().'/admin/images/',$filename);ห
+            $request->file('image')->move(public_path().'/admin/images/',$filename);
             $update_header->image = $filename;
 
             $update_header->text = $request->name;

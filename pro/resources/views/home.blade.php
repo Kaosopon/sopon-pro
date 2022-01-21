@@ -17,9 +17,10 @@
                     <p><strong>Name : </strong>{{Auth::user()->name}}</p>
                     <p><strong>Userame : </strong>{{Auth::user()->username}}</p>
                     <p><strong>Email : </strong>{{Auth::user()->email}}</p>
-
                     <p>
+                        @if (Auth::user()->checkisadmin())
                         <a href="{{route('admin')}}" class="btn btn-primary">product management</a>
+                        @endif
                         <a href="/" class="btn btn-success">home</a>
                     </p>
                 </div>
